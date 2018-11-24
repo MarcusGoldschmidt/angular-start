@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'fist-angular';
+  name = 'Marcus Goldschmidt Oliveira';
+  text = '';
+
+  exibirAlerta() {
+    alert(this.name);
+  }
 }
