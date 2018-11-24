@@ -1,0 +1,47 @@
+<mat-card>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Entrar">
+      <form (submit)="efetuarLogin()">
+        <!--EMAIL-->
+        <mat-form-field>
+          <input matInput placeholder="Email" type="email" name="email" [(ngModel)]="login.email" required>
+        </mat-form-field>
+
+
+        <!--SENHA-->
+        <mat-form-field>
+          <input matInput placeholder="Senha" type="password" name="senha" [(ngModel)]="login.senha" required>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" color="primary">
+          Entrar
+        </button>
+      </form>
+    </mat-tab>
+
+    <mat-tab label="Cadastrar">
+      <form (submit)="efetuarCadastro()">
+        <mat-form-field>
+          <span matPrefix>@</span>
+          <input matInput placeholder="Usuario" type="text" name="nome" [(ngModel)]="registro.name" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Email" type="email" name="email" [(ngModel)]="registro.email" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Senha" type="password" name="senha" [(ngModel)]="registro.senha" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Repita a senha" type="password" name="repitaSenha" [(ngModel)]="registro.repitaSenha" required>
+        </mat-form-field>
+
+        <button mat-raised-button type="submit" color="primary">
+          Cadastrar
+        </button>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>
